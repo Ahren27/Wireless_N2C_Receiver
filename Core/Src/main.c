@@ -43,7 +43,7 @@
 #define NODE_ADDRESS 0x78
 #define TARGET_ADDRESS 0x77
 #define MAX_PAYLOAD_SIZE 96
-#define RECV_TIMEOUT 10000 // in ms (10 seconds)
+#define RECV_TIMEOUT 1000 // in ms (1 seconds)
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
@@ -59,8 +59,10 @@ uint8_t measurments2[6]; // Raw data from I2C Nunchuck 2 (PC0, PC1)
 volatile SpiritFlagStatus xTxDoneFlag;
 volatile SpiritFlagStatus xRxDoneFlag;
 volatile uint32_t startTick = 0;
+volatile uint32_t waitingTick = 0;
 volatile uint8_t rxLen;
 volatile uint8_t rxSrcAddr;
+volatile uint8_t sleepFlag = 0;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
@@ -177,10 +179,11 @@ void Task2(void *argument) {
 			SpiritGotoReadyState();
 			SPSGRF_StartRx();
 
-			// Wait for at least 10000ms (10 seconds) for receiving any packets
-			while (!xRxDoneFlag
-					&& (xTaskGetTickCount() - startTick < RECV_TIMEOUT))
-				;
+			// Wait for at least 1000ms (1 seconds) for receiving any packets
+			while (!xRxDoneFlag && (waitingTick < RECV_TIMEOUT)) {
+				// Get waiting time
+				waitingTick = xTaskGetTickCount() - startTick;
+			}
 
 			// Get the length of the payload and source address
 			rxLen = SPSGRF_GetRxData(payload);
@@ -188,6 +191,13 @@ void Task2(void *argument) {
 
 			// Release the mutex after transmission
 			xSemaphoreGive(radioMutex);
+		}
+
+		if (waitingTick > RECV_TIMEOUT) {
+			sleepFlag = 1;
+			if (sleepFlag) {
+				vTaskDelay(50 / portTICK_PERIOD_MS);
+			}
 		}
 
 		if (rxSrcAddr == TARGET_ADDRESS) {
@@ -221,6 +231,11 @@ void Task3(void *argument) {
 
 			// Release the mutex after transmission
 			xSemaphoreGive(radioMutex);
+		}
+
+		if (sleepFlag) {
+			vTaskDelay(50 / portTICK_PERIOD_MS);
+			sleepFlag = 0;
 		}
 
 		// Wait for 5ms

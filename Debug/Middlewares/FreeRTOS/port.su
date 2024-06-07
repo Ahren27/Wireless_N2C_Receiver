@@ -8,6 +8,7 @@ C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Pa
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c:420:6:vPortExitCritical	16	static,ignoring_inline_asm
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c:431:6:PendSV_Handler	0	static,ignoring_inline_asm
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c:488:6:xPortSysTickHandler	16	static,ignoring_inline_asm
+C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c:510:29:vPortSuppressTicksAndSleep	40	static,ignoring_inline_asm
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c:679:30:vPortSetupTimerInterrupt	4	static
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c:701:13:vPortEnableVFP	0	static,ignoring_inline_asm
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c:717:7:vPortValidateInterruptPriority	24	static,ignoring_inline_asm

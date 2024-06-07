@@ -16,12 +16,14 @@ C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Pa
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:1975:6:vTaskStartScheduler	5
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2099:6:vTaskEndScheduler	1
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2110:6:vTaskSuspendAll	1
+C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2133:20:prvGetExpectedIdleTime	5
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2194:12:xTaskResumeAll	12
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2304:12:xTaskGetTickCount	1
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2319:12:xTaskGetTickCountFromISR	1
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2350:13:uxTaskGetNumberOfTasks	1
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2358:7:pcTaskGetName	3
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2505:14:uxTaskGetSystemState	4
+C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2596:7:vTaskStepTick	2
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2609:12:xTaskCatchUpTicks	2
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2707:12:xTaskIncrementTick	12
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2989:6:vTaskSwitchContext	6
@@ -36,7 +38,8 @@ C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Pa
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3337:6:vTaskMissedYield	1
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3345:14:uxTaskGetTaskNumber	2
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3368:7:vTaskSetTaskNumber	2
-C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3392:8:prvIdleTask	2
+C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3392:8:prvIdleTask	5
+C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3511:19:eTaskConfirmSleepModeStatus	4
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3607:13:prvInitialiseTaskLists	2
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3639:13:prvCheckTasksWaitingTermination	2
 C:/Users/ahren/STM32Cube/Repository/STM32Cube_FW_L4_V1.18.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3670:7:vTaskGetInfo	7
